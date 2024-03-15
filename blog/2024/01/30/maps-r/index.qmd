@@ -19,12 +19,12 @@ categories:
 
 **Objective:** To visualize the geographic distribution of the agricultural units that participated in the 2019 National Agricultural Survey (ENA 2019) according to production size.
 
-
 # Methodology
 
 **Data:** INEI
 
 **Survey:** ENA 2019
+
 
 **Data preprocessing**
 
