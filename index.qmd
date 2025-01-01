@@ -32,7 +32,7 @@ format:
 
 ::: {.g-col-12 .g-col-sm-8}
 
-I'm a research assistant at the [University of the Pacific’s Research Center (CIUP)](https://ciup.up.edu.pe/){target="_blank"}. I'm a student of the Specialization Diploma in Data Science for Social Sciences and Management of the [Pontifical Catholic University of Peru (PUCP)](https://www.pucp.edu.pe/){target="_blank"}. I hold a Bachelor’s degree in [Organizational and Human Management Psychology from the National University of San Marcos (UNMSM)](https://www.unmsm.edu.pe/){target="_blank"} in 2022.
+I'm a research assistant at the [University of the Pacific’s Research Center (CIUP)](https://ciup.up.edu.pe/){target="_blank"}. I hold a Specialization Diploma in Data Science for Social Sciences and Management of the [Pontifical Catholic University of Peru (PUCP)](https://www.pucp.edu.pe/){target="_blank"}. I hold a Bachelor’s degree in [Organizational and Human Management Psychology from the National University of San Marcos (UNMSM)](https://www.unmsm.edu.pe/){target="_blank"} in 2022.
 
 I'm a member of [BehData](https://github.com/BehData){target="_blank"}, a group of professionals interested in behavioral data science. Also, I'm a former member of [Avances en Medición Psicológica (AMP)](https://www.facebook.com/amp.unmsm){target="_blank"}, a group of students interested in quantitative research and psychological measurement.
 

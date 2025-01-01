@@ -1,0 +1,370 @@
+---
+title: "Research Methodology: Automatic Classification of Social Behaviors among Mice Using Deep Learning"
+date: 2024-09-20
+description: "I trained a deep learning model using the dataset of Mice Movements (Sun et al., 2021), which was published in an open source repository."
+image: "Images/Resident_Intruder_Paradigm.png"
+categories:
+  - Resident-Intruder Paradigm
+  - Automatic Classification
+  - Deep Learning
+  - Google Colab
+  - Python
+
+---
+
+# Introduction
+
+
+## Resident-Intruder Paradigm
+
+
+:::: {layout="[ 60, 40 ]"}
+
+::: {#first-column}
+
+<div style="font-size: 18px;">  <!-- Adjust the font size as needed -->
+
+- Social behaviors which provoke territorial agression (Thurmond, 1975).
+
+- Experiment:
+  - A resident mouse is put in a cage for 24 hours.
+  - Then, an intruder mouse enters the cage.
+  - A camera records the secuence of behaviors that provoce agression.
+  - At the end, researchers manually label the observed behaviors in the video to identify patterns of behavior.
+</div>
+
+:::
+
+::: {#second-column}
+
+![](Images/Resident_Intruder_Paradigm.png)
+:::
+
+::::
+
+
+## Problems
+
+
+:::: {layout="[ 60, 40 ]"}
+
+::: {#first-column}
+
+<div style="font-size: 18px;">  <!-- Adjust the font size as needed -->
+
+- **Replicability Crisis**: The observations can vary between researchers, which affect the replicability of studies.
+
+- **Fatigue and Error**: The process demands time and effort, which can provoke errors.
+
+
+</div>
+
+:::
+
+::: {#second-column}
+
+![](Images/Replicability.png)
+:::
+
+::::
+
+
+
+
+# Justification 
+
+
+## Theoretical Justification
+
+:::: {layout="[ 50, 50 ]"}
+
+::: {#first-column}
+
+
+::: {#text-block style="background-color: #f8d7da; padding: 20px; border-radius: 10px; border: 1px solid #f5c6cb; margin-top: 100px;"}
+
+<div style="font-size: 18px; color: #a71c24; font-weight: bold; background: linear-gradient(to right, black, red); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">  <!-- Adjust the font size and color as needed -->
+
+**Problem**: The observations can vary between researchers, which affect the replicability of studies.
+
+</div>
+
+:::
+
+:::
+
+::: {#second-column }
+
+::: {#text-block style="background-color: #8B0000; padding: 20px; border-radius: 10px; border: 1px solid #f5c6cb; margin-top: 70px;"}
+
+<div style="font-size: 18px; color: white;">  <!-- Adjust the font size as needed -->
+
+The classification model drives more **objective**, **precise**, and **scalable** measurements compare to manual labeling. Therefore, it increase the quality of social research.
+
+</div>
+:::
+
+:::
+
+::::
+
+
+
+## Practical Justification
+
+
+
+:::: {layout="[ 50, 50 ]"}
+
+::: {#first-column}
+
+
+::: {#text-block style="background-color: #f8d7da; padding: 20px; border-radius: 10px; border: 1px solid #f5c6cb; margin-top: 100px;"}
+
+<div style="font-size: 18px; color: #a71c24; font-weight: bold; background: linear-gradient(to right, black, red); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">  <!-- Adjust the font size and color as needed -->
+
+**Problem**: The process demands time and effort, which can provoke errors.
+
+</div>
+
+:::
+
+:::
+
+::: {#second-column }
+
+::: {#text-block style="background-color: #8B0000; padding: 20px; border-radius: 10px; border: 1px solid #f5c6cb; margin-top: 70px;"}
+
+<div style="font-size: 18px; color: white;">  <!-- Adjust the font size as needed -->
+
+The automatic classification model streamlines the research process in research centers making researchers more productive.
+
+</div>
+:::
+
+:::
+
+::::
+
+
+
+
+# Objective
+
+
+<div style="font-size: 18px; margin-top: 80px;">  <!-- Adjust the font size as needed -->
+
+Develop an automatic classification model for the monitoring and analysis of animal behavior in research environments.
+
+</div>
+
+
+
+# Methodology {background-image="Images/Resident_Intruder_Paradigm.png"}
+
+
+
+## Data
+
+::: {.panel-tabset}
+
+### Tool
+
+- **MARS**: A tool for capturing the positions of mice using deep learning (Segalin et al, 2021).
+
+::: {layout="[40,60]"}
+
+![](Images/MARS.png)
+
+![](Images/mars_demo.gif)
+
+:::
+
+
+### Challenge
+
+::: {layout="[50,50]"}
+
+- **Caltech Data** published the <a href="https://data.caltech.edu/records/s0vdx-0k302" target="_blank">dataset</a> which contains positions and labels.
+
+![](Images/Caltech.png){width=800px height=300px}
+:::
+
+### Task
+
+
+![](Images/Task1.png)
+
+:::
+
+
+
+
+## Exploratory Data Analysis
+
+::: {.panel-tabset}
+
+### Sequence
+
+- Each sequence corresponds to a particular experiment involving a resident mouse (0) and an intruder mouse (1).
+
+![](Images/sequence.png)
+
+
+### Visualitation
+
+::: {layout="[40,60]"}
+- Each sequence has a different number of frames.
+
+![](Images/pose_sequence.gif)
+
+::: 
+
+
+### F / sequence
+
+![](Images/Frame1.png)
+
+### F / Dataset
+
+Percentaje of frames per class in the whole dataset.
+
+![](Images/Frame2.png)
+
+
+
+:::
+
+
+
+
+## Preprocessing
+
+::: {.panel-tabset}
+
+### Loading data
+
+![](Images/LoadData.png)
+
+
+### Padding data
+
+![](Images/PaddingData.png)
+
+
+::: 
+
+
+
+
+## Training
+
+::: {.panel-tabset}
+
+
+### Loss function
+
+<div style="font-size: 18px;">  <!-- Adjust the font size as needed -->
+
+Sparse Categorical Cross Entropy is appropriate for multi-class classification problems.
+
+</div>
+
+![](Images/LossFunction.png)
+
+
+
+
+### Model Structure
+
+![](Images/ModelStructure.png)
+
+
+
+### Training
+
+![](Images/Training.png)
+
+::: 
+
+
+
+## Evaluation
+
+::: {.panel-tabset}
+
+### Model Accuracy
+
+![](Images/Model_Accuracy.png)
+
+### Model Loss
+
+![](Images/Model_Loss.png)
+
+### Test Accuracy
+
+![](Images/Test_Accuracy.png)
+
+:::
+
+
+
+# Expected Impact
+
+
+:::: {layout="[ 50, 50 ]"}
+
+::: {#first-column}
+
+::: {#text-block style="background-color: #8B0000; padding: 20px; border-radius: 10px; border: 1px solid #f5c6cb; margin-top: 70px;"}
+
+<div style="font-size: 18px; color: white;">  <!-- Adjust the font size as needed -->
+
+**Advances in Scientific Research**: 
+
+- Significantly reduces time and errors in the process.
+- Improves the precision and consistency of the results.
+- Optimizes the replicability of studies by minimizing variance between observers.
+
+</div>
+
+:::
+
+:::
+
+::: {#second-column }
+
+::: {#text-block style="background-color: #8B0000; padding: 20px; border-radius: 10px; border: 1px solid #f5c6cb; margin-top: 70px;"}
+
+<div style="font-size: 18px; color: white;">  <!-- Adjust the font size as needed -->
+
+**Practical Application**: 
+
+- Can be expanded to identify social human behaviors, such as harassment and bullying.
+- Could help address security issues in schools and businesses by identifying dangerous behaviors automatically.
+- Could aid in the care of animals during their development.
+
+</div>
+:::
+
+:::
+
+::::
+
+
+
+# References
+
+
+<div style="font-size: 18px; text-indent: -1.27cm; padding-left: 1.27cm;">
+
+Segalin, C., Williams, J., Karigo, T., Hui, M., Zelikowsky, M., Sun, J. J., Perona, P., Anderson, D. J., & Kennedy, A. (2021). The Mouse Action Recognition System (MARS) software pipeline for automated analysis of social behaviors in mice. *eLife, 10*, e63720. https://doi.org/10.7554/eLife.63720 
+
+Sun, J. J., Karigo, T., Chakraborty, D., Mohanty, S. P., Wild, B., Sun, Q., Chen, C., Anderson, D. J., Perona, P., Yue, Y., & Kennedy, A. (2021). The Multi-Agent Behavior Dataset: Mouse Dyadic Social Interactions. *Adv Neural Inf Process Syst*(Db1), 1-15.
+
+Thurmond, J. B. (1975). Technique for producing and measuring territorial aggression using laboratory mice. *Physiology & Behavior, 14*(6), 879-881. https://doi.org/https://doi.org/10.1016/0031-9384(75)90086-4
+
+</div>
+
+
+
