@@ -24,13 +24,13 @@ categories:
 
 <div style="font-size: 18px;">  <!-- Adjust the font size as needed -->
 
-- Social behaviors which provoke territorial agression (Thurmond, 1975).
+- Social behaviors that provoke territorial aggression (Thurmond, 1975).
 
 - Experiment:
-  - A resident mouse is put in a cage for 24 hours.
+  - A resident mouse is placed in a cage for 24 hours.
   - Then, an intruder mouse enters the cage.
-  - A camera records the secuence of behaviors that provoce agression.
-  - At the end, researchers manually label the observed behaviors in the video to identify patterns of behavior.
+  - A camera records the sequence of behaviors that provoke aggression.
+  - At the end, researchers manually label the observed behaviors in the video to identify behavior patterns.
 </div>
 
 :::
@@ -52,9 +52,9 @@ categories:
 
 <div style="font-size: 18px;">  <!-- Adjust the font size as needed -->
 
-- **Replicability Crisis**: The observations can vary between researchers, which affect the replicability of studies.
+- **Replicability Crisis**: Observations may vary between researchers, affecting the replicability of studies.
 
-- **Fatigue and Error**: The process demands time and effort, which can provoke errors.
+- **Fatigue and Error**: The process is time-consuming and demanding, which can lead to errors.
 
 
 </div>
@@ -85,7 +85,7 @@ categories:
 
 <div style="font-size: 18px; color: #a71c24; font-weight: bold; background: linear-gradient(to right, black, red); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">  <!-- Adjust the font size and color as needed -->
 
-**Problem**: The observations can vary between researchers, which affect the replicability of studies.
+**Problem**: Observations may vary between researchers, affecting the replicability of studies.
 
 </div>
 
@@ -99,7 +99,8 @@ categories:
 
 <div style="font-size: 18px; color: white;">  <!-- Adjust the font size as needed -->
 
-The classification model drives more **objective**, **precise**, and **scalable** measurements compare to manual labeling. Therefore, it increase the quality of social research.
+The classification model enables more **objective**, **precise**, and **scalable** measurements compared to manual labeling. Therefore, it increases the quality of social research.
+
 
 </div>
 :::
@@ -123,7 +124,7 @@ The classification model drives more **objective**, **precise**, and **scalable*
 
 <div style="font-size: 18px; color: #a71c24; font-weight: bold; background: linear-gradient(to right, black, red); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">  <!-- Adjust the font size and color as needed -->
 
-**Problem**: The process demands time and effort, which can provoke errors.
+**Problem**: The process is time-consuming and demanding, which can lead to errors.
 
 </div>
 
@@ -137,7 +138,7 @@ The classification model drives more **objective**, **precise**, and **scalable*
 
 <div style="font-size: 18px; color: white;">  <!-- Adjust the font size as needed -->
 
-The automatic classification model streamlines the research process in research centers making researchers more productive.
+The automatic classification model streamlines the research process in research centers, making researchers more productive.
 
 </div>
 :::
@@ -154,7 +155,7 @@ The automatic classification model streamlines the research process in research 
 
 <div style="font-size: 18px; margin-top: 80px;">  <!-- Adjust the font size as needed -->
 
-Develop an automatic classification model for the monitoring and analysis of animal behavior in research environments.
+To develop an automatic classification model for monitoring and analyzing animal behavior in research environments.
 
 </div>
 
@@ -170,7 +171,7 @@ Develop an automatic classification model for the monitoring and analysis of ani
 
 ### Tool
 
-- **MARS**: A tool for capturing the positions of mice using deep learning (Segalin et al, 2021).
+- **MARS**: A tool for capturing mouse positions using deep learning (Segalin et al., 2021).
 
 ::: {layout="[40,60]"}
 
@@ -185,7 +186,7 @@ Develop an automatic classification model for the monitoring and analysis of ani
 
 ::: {layout="[50,50]"}
 
-- **Caltech Data** published the <a href="https://data.caltech.edu/records/s0vdx-0k302" target="_blank">dataset</a> which contains positions and labels.
+- **Caltech Data** published the <a href="https://data.caltech.edu/records/s0vdx-0k302" target="_blank">dataset</a> , which contains positions and labels.
 
 ![](Images/Caltech.png){width=800px height=300px}
 :::
@@ -206,12 +207,12 @@ Develop an automatic classification model for the monitoring and analysis of ani
 
 ### Sequence
 
-- Each sequence corresponds to a particular experiment involving a resident mouse (0) and an intruder mouse (1).
+- Each sequence corresponds to a specific experiment involving a resident mouse (0) and an intruder mouse (1).
 
 ![](Images/sequence.png)
 
 
-### Visualitation
+### Visualization
 
 ::: {layout="[40,60]"}
 - Each sequence has a different number of frames.
@@ -227,7 +228,7 @@ Develop an automatic classification model for the monitoring and analysis of ani
 
 ### F / Dataset
 
-Percentaje of frames per class in the whole dataset.
+Percentage of frames per class in the entire dataset.
 
 ![](Images/Frame2.png)
 
@@ -266,7 +267,7 @@ Percentaje of frames per class in the whole dataset.
 
 <div style="font-size: 18px;">  <!-- Adjust the font size as needed -->
 
-Sparse Categorical Cross Entropy is appropriate for multi-class classification problems.
+Sparse Categorical Cross-Entropy is appropriate for multi-class classification problems.
 
 </div>
 
@@ -322,9 +323,9 @@ Sparse Categorical Cross Entropy is appropriate for multi-class classification p
 
 **Advances in Scientific Research**: 
 
-- Significantly reduces time and errors in the process.
-- Improves the precision and consistency of the results.
-- Optimizes the replicability of studies by minimizing variance between observers.
+- Significantly reduces time and errors in the research process.
+- Enhances the precision and consistency of results.
+- Optimizes study replicability by minimizing variance between observers.
 
 </div>
 
@@ -340,9 +341,9 @@ Sparse Categorical Cross Entropy is appropriate for multi-class classification p
 
 **Practical Application**: 
 
-- Can be expanded to identify social human behaviors, such as harassment and bullying.
-- Could help address security issues in schools and businesses by identifying dangerous behaviors automatically.
-- Could aid in the care of animals during their development.
+- Can be expanded to identify human social behaviors, such as harassment and bullying.
+- Could help address security issues in schools and workplaces by automatically detecting dangerous behaviors.
+- May aid in monitoring and improving animal care during development.
 
 </div>
 :::
