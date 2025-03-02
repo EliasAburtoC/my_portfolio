@@ -1,13 +1,13 @@
 ---
 title: Curriculum vitæ
 description: "Elías Aburto's CV"
-date: 2024-11-10
+date: 2025-03-02
 title-block-banner: "#771C6D"
 published-title: CV last updated
 engine: knitr
 freeze: false
 cv:
-  pdf: "2024-11-10_elias-aburto-cv.pdf"
+  pdf: "2025-03-02_elias-aburto-cv.pdf"
 ---
 
 ```{css, echo=FALSE}
